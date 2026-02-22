@@ -1,5 +1,3 @@
-using System;
-
 class Student
 {
     public string Fname{get; set;}
@@ -8,7 +6,6 @@ class Student
     public int Age{get; set;}
     public string Gender{get; set;}
     public string Grade{get; set;}
-
 
     public Student(string fname, string lname, int roll, int age, string gender, string grade)
     {
@@ -19,7 +16,6 @@ class Student
         Gender = gender;
         Grade = grade;
     }
-
     public void PrintStudent()
     {
         Console.WriteLine($"First Name: {Fname}, Last Name: {Lname}, Roll: {Roll}, Age: {Age}, Gender: {Gender}, Grade:{Grade} ");

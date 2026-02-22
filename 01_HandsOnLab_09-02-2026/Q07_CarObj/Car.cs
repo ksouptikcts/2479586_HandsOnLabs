@@ -1,10 +1,8 @@
-    
     public class Car
     {
         public string Brand { get; set;}
         public string Model { get; set;}
         public int Price { get; set;}
-
         public int Milage { get; set;}
 
         public Car( string brand, string model, int price, int milage=0)
