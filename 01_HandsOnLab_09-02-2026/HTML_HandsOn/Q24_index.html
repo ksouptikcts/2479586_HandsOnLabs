@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q24_Form</title>
+    <link rel="stylesheet" href="Q24_style.css">
+
+    <style>
+        body {}
+
+        form {
+            margin: auto;
+            background-color: white;
+            width: 50%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result {
+            margin: auto;
+            background-color: white;
+            width: 80vh;
+            height: 100px;
+        }
+
+        .main_div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Form Submission</h1>
+
+    <div class="main_div">
+
+        <form action="" id="login_form">
+
+            <div>
+                <label for="">Username</label>
+                <input type="text" id="username_id">
+                <br><br>
+            </div>
+
+            <div>
+                <label for="">Enail</label>
+                <input type="email" id="email_id">
+                <br><br>
+            </div>
+
+            <div>
+                <label for="">Gender</label>
+                <input type="radio" name="gender" value="female">
+                <input type="radio" name="gender" value="male">
+                <br><br>
+            </div>
+
+
+            <div>
+                <label for="">Country</label>
+                <!-- <input type="text" id="country_id"> -->
+                <select name="country" id="country_id">
+                    <option value=""></option>
+                    <option value="india">India</option>
+                    <option value="china">China</option>
+                    <option value="russia">Russia</option>
+                </select>
+                <br><br>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+        <br><br>
+        <div id="result_area" class="result">
+            this is the result area
+        </div>
+    </div>
+
+
+    <script>
+
+        // get the form element form the window
+        const form = document.getElementById('login_form');
+        const result =  document.getElementById('result_area');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            console.log("got the form element");
+
+            //get the values
+            const username = document.getElementById("username_id").value;
+            const emailid = document.getElementById("email_id").value;
+            const conutry = document.getElementById("country_id").value;
+
+            var info = "name is "+username+" and the emailId is "+emailid+" and the country live in: "+conutry;
+
+            result.textContent = info;
+
+            console.log(username + " " + emailid + " " + conutry);
+            console.log(info);
+        });
+
+        // changing the area text in this
+
+
+    </script>
+</body>
+
+</html>
